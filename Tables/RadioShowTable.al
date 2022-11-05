@@ -1,6 +1,6 @@
-table 50101 "Radio Show"
+table 50105 "Radio Show Table"
 {
-    //DataClassification = ToBeClassified;
+    DataClassification = ToBeClassified;
 
     fields
     {
@@ -14,11 +14,27 @@ table 50101 "Radio Show"
         field(8; "Audience Share"; Decimal) { }
         field(9; "Advertising Revenue"; Decimal) { }
         field(10; "Royalty Cost"; Decimal) { }
+        field(11; Frequency; Option)
+        {
+            OptionMembers = Hourly,Daily,Weekly,Monthly;
+        }
+        field(12; "PSA Planned Quantity"; Integer) { }
+        field(13; "Ads Planned Quantity"; Integer) { }
+        field(14; "News Required"; Boolean) { }
+        field(15; "News Duration"; Boolean) { }
+        field(16; "Sports Required"; Boolean) { }
+        field(17; "Sports Duration"; Duration) { }
+        field(18; "Weather Required"; Boolean) { }
+        field(19; "Weather Duration"; Duration) { }
+        field(20; "Data Filter"; Date)
+        {
+            FieldClass = FlowFilter;
+        }
     }
 
     keys
     {
-        key(PK; "No.")
+        key(Pk; "No.")
         {
             Clustered = true;
         }
