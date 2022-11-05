@@ -1,6 +1,7 @@
 table 50106 "Radio Show Type"
 {
-    DataClassification = ToBeClassified;
+    LookupPageId = "Radio Show Type";
+    DrillDownPageId = "Radio Show Type";
 
     fields
     {
