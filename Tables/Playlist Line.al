@@ -10,7 +10,15 @@ table 50111 "Playlist Line"
         {
             OptionMembers = ,Resource,Show,Item;
         }
-        field(4; "No."; Code[20]) { }
+        field(4; "No."; Code[20])
+        {
+            TableRelation = if (Type = const(Resource)) Resource."No."
+            else
+            if (Type = const(Show)) "Radio Show"."No."
+            else
+            if (Type = const(Item)) Item."No.";
+
+        }
         field(5; "Data Format"; Option)
         {
             OptionMembers = ,Vinyl,CD,MP3,PSA,Advertisement;
