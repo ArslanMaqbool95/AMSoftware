@@ -17,7 +17,8 @@
             "numberOfSqlStatements": 10,
             "breakOnNext": "WebServiceClient",
             "tenant": "default",
-            "port": 7099
+            "port": 7099,
+            "schemaUpdateMode": "ForceSync"
         },
        
     ]
