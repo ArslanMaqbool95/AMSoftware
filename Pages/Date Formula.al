@@ -12,7 +12,7 @@ page 50116 "Date Formula"
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(Group)
             {
                 field("Primary Key"; Rec."Primary Key")
                 {
