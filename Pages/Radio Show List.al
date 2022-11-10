@@ -20,12 +20,22 @@ page 50102 "Radio Show List"
                 field("Average Listeners"; Rec."Average Listners") { ApplicationArea = All; }
                 field("Audience Share"; Rec."Audience Share") { ApplicationArea = All; }
                 field("Advertisement Revenue"; Rec."Advertising Revenue") { ApplicationArea = All; }
-                field("Royalty Cost"; Rec."Royalty Cost") { ApplicationArea = All; }
+                field("Royalty Cost"; Rec."Royalty Cost")
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }
+        // area(FactBoxes)
+        // {
+        //     part(Fans; "Radio Show Fan Factbox")
+        //     {
+        //         ApplicationArea = all;
+        //         SubPageLink = "Radio Show" = field("No.");
+        //     }
+        //  }
     }
-
     actions
     {
         area(Processing)

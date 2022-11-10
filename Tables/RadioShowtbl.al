@@ -20,6 +20,8 @@ table 50101 "Radio Show"
         field(8; "Audience Share"; Decimal) { }
         field(9; "Advertising Revenue"; Decimal) { }
         field(10; "Royalty Cost"; Decimal) { }
+        field(11; "Document No."; Code[20]) { }
+
     }
 
     keys
@@ -29,6 +31,7 @@ table 50101 "Radio Show"
             Clustered = true;
         }
     }
+
 
     var
         myInt: Integer;
