@@ -1,6 +1,4 @@
-/// <summary>
-/// Page Date Formula (ID 50116).
-/// </summary>
+
 page 50116 "Date Formula"
 {
     PageType = List;
