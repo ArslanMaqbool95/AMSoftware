@@ -1,3 +1,4 @@
+
 page 50102 "Radio Show List"
 {
     PageType = Card;
@@ -27,14 +28,6 @@ page 50102 "Radio Show List"
 
             }
         }
-        // area(FactBoxes)
-        // {
-        //     part(Fans; "Radio Show Fan Factbox")
-        //     {
-        //         ApplicationArea = all;
-        //         SubPageLink = "Radio Show" = field("No.");
-        //     }
-        //  }
     }
     actions
     {

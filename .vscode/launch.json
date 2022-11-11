@@ -6,20 +6,19 @@
             "type": "al",
             "request": "launch",
             "environmentType": "OnPrem",
-            "server": "http://localhost:8080/BC200",
+            "server": "http://localhost:8080/BC200/",
             "serverInstance": "BC200",
             "authentication": "Windows",
+            "startupObjectId": 22,
             "breakOnError": "All",
             "breakOnRecordWrite": "None",
+            "launchBrowser": true,
             "enableSqlInformationDebugger": true,
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
-            "breakOnNext": "WebServiceClient",
-            "tenant": "default",
-            "port": 7099,
-            "schemaUpdateMode": "ForceSync"
+            "tenant":"default",
+            "port": 7099
         },
-       
     ]
 }

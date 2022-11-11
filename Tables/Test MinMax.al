@@ -6,14 +6,14 @@ table 50121 "Test Min Max"
     {
         field(1; Test; Decimal)
         {
-            //DataClassification = ToBeClassified;
+            DataClassification = ToBeClassified;
             DecimalPlaces = 0;
             BlankNumbers = DontBlank;
             BlankZero = true;
             SignDisplacement = 1;
             MinValue = 0;
             MaxValue = 10;
-            AutoIncrement = true;
+            //AutoIncrement = true;
 
         }
     }
