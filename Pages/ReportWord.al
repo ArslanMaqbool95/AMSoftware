@@ -8,7 +8,7 @@ report 50104 "Radio Shows"
 
     dataset
     {
-        dataitem(DataItemName; "Radio Show")
+        dataitem(DataItemName; "Radio Show Number")
         {
             column("NO"; "No.") { }
             column("RadioShowType"; "Radio Show Type") { }

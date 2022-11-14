@@ -3,7 +3,7 @@ page 50117 "Fixed Asset Card "
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "Radio Show";
+    SourceTable = "Radio Show Number";
 
     layout
     {

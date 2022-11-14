@@ -1,4 +1,4 @@
-page 50119 RadioShowFanFactBox
+page 50120 RadioShowNumberFanFactBox
 {
     PageType = ListPart;
     ApplicationArea = All;

@@ -1,6 +1,6 @@
-table 50101 "Radio Show"
+table 50102 "Radio Show Number"
 {
-    //DataClassification = ToBeClassified;
+    DataClassification = ToBeClassified;
 
     fields
     {
@@ -35,25 +35,5 @@ table 50101 "Radio Show"
 
     var
         myInt: Integer;
-
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
 
 }

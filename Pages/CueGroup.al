@@ -3,7 +3,7 @@ page 50118 "S0 Processor Activities"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "Radio Show";
+    SourceTable = "Radio Show Number";
 
     layout
     {

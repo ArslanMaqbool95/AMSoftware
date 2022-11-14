@@ -3,7 +3,7 @@ page 50103 "Radio Show Card"
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "Radio Show";
+    SourceTable = "Radio Show Number";
 
     layout
     {

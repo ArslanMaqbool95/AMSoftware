@@ -14,7 +14,7 @@ table 50111 "Playlist Line"
         {
             TableRelation = if (Type = const(Resource)) Resource."No."
             else
-            if (Type = const(Show)) "Radio Show"."No."
+            if (Type = const(Show)) "Radio Show Number"."No."
             else
             if (Type = const(Item)) Item."No.";
 
