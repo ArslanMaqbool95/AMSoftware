@@ -11,7 +11,6 @@ table 50100 "Playlist Item Rate Test"
         field(5; "Host Code"; Code[20]) { }
         field(6; "Host Name"; Text[50]) { }
         field(7; "Average Listners"; Decimal) { }
-
     }
 
     keys
