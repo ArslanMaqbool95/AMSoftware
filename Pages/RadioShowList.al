@@ -10,7 +10,7 @@ page 50102 "Radio Show List"
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(GroupName)
             {
                 field("No."; Rec."No.") { ApplicationArea = All; }
                 field("Radio Show Type"; Rec."Radio Show Type") { ApplicationArea = All; }
@@ -43,6 +43,7 @@ page 50102 "Radio Show List"
                 end;
             }
         }
+
     }
 
     var
