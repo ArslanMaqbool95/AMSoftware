@@ -10,11 +10,11 @@ page 50110 "Lot Avail. by Bin"
         {
             repeater(Group)
             {
-                field("Item No."; "Item No.") { ApplicationArea = All; }
-                field("Location Code"; "Location Code") { ApplicationArea = all; }
-                field("Bin Code"; "Bin Code") { ApplicationArea = All; }
-                field("Serial No."; "Serial No.") { ApplicationArea = All; }
-                field(Quantity; Quantity) { ApplicationArea = all; }
+                field("Item No."; Rec."Item No.") { ApplicationArea = All; }
+                field("Location Code"; Rec."Location Code") { ApplicationArea = all; }
+                field("Bin Code"; Rec."Bin Code") { ApplicationArea = All; }
+                field("Serial No."; Rec."Serial No.") { ApplicationArea = All; }
+                field(Quantity; Rec.Quantity) { ApplicationArea = all; }
             }
         }
     }
@@ -26,13 +26,13 @@ page 50110 "Lot Avail. by Bin"
     begin
         LotAvail.Open;
         while LotAvail.Read do begin
-            Init;
-            "Entry No." := "Entry No." + 1;
-            "Item No." := LotAvail.Item_No;
-            "Location Code" := LotAvail.Location_Code;
+            Rec.Init;
+            Rec."Entry No." := Rec."Entry No." + 1;
+            Rec."Item No." := LotAvail.Item_No;
+            Rec."Location Code" := LotAvail.Location_Code;
             //"Bin Code" := LotAvail.Bin_Code;
-            Quantity := LotAvail.Sum_Quantity;
-            Insert;
+            Rec.Quantity := LotAvail.Sum_Quantity;
+            Rec.Insert;
         end;
     end;
 }
