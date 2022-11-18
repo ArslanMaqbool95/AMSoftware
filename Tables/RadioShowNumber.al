@@ -1,3 +1,6 @@
+/// <summary>
+/// Table Radio Show Number (ID 50102).
+/// </summary>
 table 50102 "Radio Show Number"
 {
     DataClassification = ToBeClassified;
