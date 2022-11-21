@@ -1,6 +1,3 @@
-/// <summary>
-/// Table Radio Show Number (ID 50102).
-/// </summary>
 table 50102 "Radio Show Number"
 {
     DataClassification = ToBeClassified;
@@ -24,6 +21,7 @@ table 50102 "Radio Show Number"
         field(9; "Advertising Revenue"; Decimal) { }
         field(10; "Royalty Cost"; Decimal) { }
         field(11; "Document No."; Code[20]) { }
+        field(12; "Item No."; Code[20]) { }
 
     }
 

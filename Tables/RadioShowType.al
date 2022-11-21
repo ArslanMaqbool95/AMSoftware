@@ -8,36 +8,45 @@ table 50106 "Radio Show Type"
         field(1; Code; Code[20]) { }
         field(2; Description; Text[50]) { }
     }
-
-    keys
-    {
-        key(Pk; Code)
-        {
-            Clustered = true;
-        }
-    }
-
+    procedure HelperCreateShowType("Code": Code[10]; Descr: Text): Boolean
     var
-        myInt: Integer;
+        RadioShowType: Record "Radio Show Type";
 
-    trigger OnInsert()
     begin
-
+        RadioShowType.Code := Code;
+        RadioShowType.Description := Descr;
+        RadioShowType.Insert;
     end;
 
-    trigger OnModify()
-    begin
+    // keys
+    // {
+    //     key(Pk; Code)
+    //     {
+    //         Clustered = true;
+    //     }
+    // }
 
-    end;
+    // var
+    //     myInt: Integer;
 
-    trigger OnDelete()
-    begin
+    // trigger OnInsert()
+    // begin
 
-    end;
+    // end;
 
-    trigger OnRename()
-    begin
+    // trigger OnModify()
+    // begin
 
-    end;
+    // end;
+
+    // trigger OnDelete()
+    // begin
+
+    // end;
+
+    // trigger OnRename()
+    // begin
+
+    // end;
 
 }

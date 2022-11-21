@@ -1,6 +1,3 @@
-/// <summary>
-/// Table Date Formula (ID 50115).
-/// </summary>
 table 50115 "Date Formula"
 {
     fields

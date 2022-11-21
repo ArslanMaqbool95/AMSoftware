@@ -25,6 +25,7 @@ page 50106 "Radio Show Type"
         }
     }
 
+
     actions
     {
         area(Processing)
@@ -41,6 +42,10 @@ page 50106 "Radio Show Type"
         }
     }
 
+    // ClientRec."Phone No." := '312' + '-' + '1212';
+    // ClientRec."Phone No." := '312' + '-' + '555' + '-' + '1212';
+
     var
         myInt: Integer;
+    // "Phone No." := '312-555-1212';
 }

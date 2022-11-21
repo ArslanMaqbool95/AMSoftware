@@ -12,6 +12,7 @@ page 50103 "Radio Show Card"
             group(GroupName)
             {
                 field("No."; Rec."No.") { ApplicationArea = All; }
+                field("Item No."; Rec."Item No.") { }
                 field("Radio Show Type"; Rec."Radio Show Type") { ApplicationArea = All; }
                 field("Name"; Rec."Name") { ApplicationArea = All; }
                 field("Run Time"; Rec."Run Time") { ApplicationArea = All; }
@@ -41,6 +42,17 @@ page 50103 "Radio Show Card"
         }
     }
 
+    trigger OnOpenPage()
+
+    begin
+        //hel := 'Testing Phase';
+        // Message('I am Debugger %1', hel);
+        err := 'Error checking....';
+        Error('Loop %1', err);
+    end;
+
+
     var
-        myInt: Integer;
+        err: TEXT;
+    //hel: Text;
 }

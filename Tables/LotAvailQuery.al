@@ -1,11 +1,6 @@
 query 50106 "Lot Avail. by Bin"
 {
     QueryType = Normal;
-    // APIPublisher = 'PublisherName';
-    // APIGroup = 'GroupName';
-    // APIVersion = 'VersionList';
-    // EntityName = 'EntityName';
-    // EntitySetName = 'EntitySetName';
 
     elements
     {
