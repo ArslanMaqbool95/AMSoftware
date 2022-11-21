@@ -42,17 +42,32 @@ page 50103 "Radio Show Card"
         }
     }
 
-    trigger OnOpenPage()
+    // trigger OnOpenPage()
 
+    // begin
+    //     //hel := 'Testing Phase';
+    //     // Message('I am Debugger %1', hel);
+    //     // err := 'Error checking....';
+    //     // Error('Loop %1', err);
+    // end;
+
+    var
+        Question: Text;
+        Answer: Boolean;
+        CustomerNo: Integer;
+        Text000: Label 'Exit without saving changes to customer %1?';
+        Text001: Label 'You selected %1.';
+
+    trigger OnOpenPage()
     begin
-        //hel := 'Testing Phase';
-        // Message('I am Debugger %1', hel);
-        err := 'Error checking....';
-        Error('Loop %1', err);
+        CustomerNo := 01121212;
+        Question := Text000;
+        Answer := Dialog.Confirm(Question, true, CustomerNo);
+        Message(Text001, Answer);
     end;
 
 
-    var
-        err: TEXT;
+    // var
+    // err: TEXT;
     //hel: Text;
 }
