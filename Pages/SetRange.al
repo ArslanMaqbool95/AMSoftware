@@ -1,4 +1,4 @@
-page 50126 "Radio Show StrMenu"
+page 50127 "Radio Show Set Range"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -36,16 +36,23 @@ page 50126 "Radio Show StrMenu"
         }
     }
     var
-        Options: Text[50];
-        Selected: Integer;
-        Text000: Label 'Red,Green,Blue,Yellow,Pink,Orange,Unknown';
-        Text001: Label 'You selected option %1.';
-        Text002: Label 'Choose one of the following options:';
+        MyFieldRef: FieldRef;
+        CustomerRecref: RecordRef;
+        //"var": Integer;
+        LowVal: Integer;
+        Text000: Label '%1 records were retrieved.';
 
     trigger OnOpenPage()
     begin
-        Options := Text000;
-        Selected := Dialog.StrMenu(Options, 3, Text002);
-        Message(Text001, Selected);
+        CustomerRecref.Open(Database::Customer);
+        MyFieldRef := CustomerRecref.Field(1);
+        MyFieldRef.SetRange('2', '40');
+        // "var" := 0;
+        if CustomerRecref.Find('-') then
+            repeat
+                LowVal := LowVal + 1;
+            //"var" := "var" + 1;
+            until CustomerRecref.Next = 0;
+        Message(Text000, LowVal);
     end;
 }

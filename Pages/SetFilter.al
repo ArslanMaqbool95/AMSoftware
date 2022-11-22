@@ -1,4 +1,4 @@
-page 50126 "Radio Show StrMenu"
+page 50128 "Radio Show Set Filter"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -35,17 +35,10 @@ page 50126 "Radio Show StrMenu"
             }
         }
     }
-    var
-        Options: Text[50];
-        Selected: Integer;
-        Text000: Label 'Red,Green,Blue,Yellow,Pink,Orange,Unknown';
-        Text001: Label 'You selected option %1.';
-        Text002: Label 'Choose one of the following options:';
-
     trigger OnOpenPage()
+    var
+        RadioShowNumber: Record "Radio Show Number";
     begin
-        Options := Text000;
-        Selected := Dialog.StrMenu(Options, 3, Text002);
-        Message(Text001, Selected);
+        RadioShowNumber.Setfilter("Item No.", '%2', '1300', '1400');
     end;
 }
