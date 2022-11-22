@@ -36,9 +36,9 @@ page 50126 "Radio Show StrMenu"
         }
     }
     var
-        Options: Text[30];
+        Options: Text[50];
         Selected: Integer;
-        Text000: Label 'Red,Green,Blue,Yellow';
+        Text000: Label 'Red,Green,Blue,Yellow,Pink,Orange';
         Text001: Label 'You selected option %1.';
         Text002: Label 'Choose one of the following options:';
 
