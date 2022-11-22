@@ -27,7 +27,7 @@ table 50102 "Radio Show Number"
 
     keys
     {
-        key(PK; "No.")
+        key(PK; "No.", "Item No.")
         {
             Clustered = true;
         }
