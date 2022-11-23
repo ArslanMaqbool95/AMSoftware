@@ -1,4 +1,4 @@
-page 50129 "Radio Show Set Get"
+page 50130 "Radio Show Set Find"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -30,12 +30,21 @@ page 50129 "Radio Show Set Get"
             }
         }
     }
-    trigger OnOpenPage()
+
     var
         RadioShowNumber: Record "Radio Show Number";
-        Bool: Boolean;
+        Question: Text;
+        Answer: Boolean;
+        CustomerNo: Integer;
+        Text000: Label 'You Select this  %1?';
+        Text001: Label 'How may i help you ?';
+
+    trigger OnOpenPage()
     begin
-        // Bool := RadioShowNumber.get("No.", "Item No.");
-        Bool := RadioShowNumber.Find("No.");
+        CustomerNo := 01121212;
+        Question := Text001;
+        Answer := Dialog.Confirm(Question, true, CustomerNo);
+        Message(Text000, Answer);
     end;
+
 }
