@@ -12,8 +12,22 @@ table 50119 "Radio Show Fan"
         field(6; "Address"; Text[50]) { }
         field(7; "Address 2"; Text[50]) { }
         field(8; City; Text[50]) { }
-        field(9; "Country/Region Code"; Text[50]) { }
-        field(10; "Post_Code"; Code[20]) { }
+        field(9; "Country/Region Code"; Code[50]) { }
+        field(10; Country; Text[30]) { }
+        field(11; "Post_Code"; Code[20])
+        {
+            trigger OnValidate()
+            var
+                PostCode: Record "Post Code";
+            begin
+                PostCode.ValidatePostCode(City, "Post_Code", Country, "Country/Region Code", (CurrFieldNo <> 0) And GuiAllowed);
+            end;
+        }
+        field(12; Gender; Option)
+        {
+            OptionMembers = ,Male,Female;
+        }
+        field(13; "Birth Date"; Date) { }
     }
 
     keys
