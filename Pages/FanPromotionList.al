@@ -38,6 +38,17 @@ report 50136 "Fan Promotion List"
                 SelectThisFan := false;
                 if Age12orLess AND (FanAge <= 12) then
                     SelectThisFan := True;
+                if Age13to18 AND (FanAge > 12) AND (FanAge < 19) then
+                    SelectThisFan := True;
+                if Age19to34 AND (FanAge > 18) AND (FanAge < 35) then
+                    SelectThisFan := True;
+                if Age35to50 AND (FanAge > 34) AND (FanAge < 51) then
+                    SelectThisFan := True;
+                if AgeOver50 AND (FanAge > 50) then
+                    SelectThisFan := True;
+
+                if SelectThisFan <> true then
+                    CurrReport.Skip();
             end;
 
         }
