@@ -32,6 +32,12 @@ report 50136 "Fan Promotion List"
             begin
                 CountryRegion.Get("Country/Region Code");
                 CountryName := CountryRegion.Name;
+
+                FanAge := Round(((WorkDate - "Birth Date") / 365), 1.0, '<');
+
+                SelectThisFan := false;
+                if Age12orLess AND (FanAge <= 12) then
+                    SelectThisFan := True;
             end;
 
         }
