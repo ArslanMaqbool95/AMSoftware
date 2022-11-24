@@ -9,6 +9,11 @@ table 50119 "Radio Show Fan"
         field(3; Name; Text[50]) { }
         field(4; "Email"; Text[250]) { }
         field(5; "Last Contacted"; Date) { }
+        field(6; "Address"; Text[50]) { }
+        field(7; "Address 2"; Text[50]) { }
+        field(8; City; Text[50]) { }
+        field(9; "Country/Region Code"; Text[50]) { }
+        field(10; "Post_Code"; Code[20]) { }
     }
 
     keys
