@@ -25,7 +25,10 @@ table 50111 "Playlist Line"
         }
         field(6; "Publisher"; Code[10]) { }
         field(7; Description; Text[50]) { }
-        field(8; Duration; Duration) { }
+        field(8; Duration; Duration)
+        {
+            Editable = false;
+        }
         field(9; "Start Time"; Time) { }
         field(10; "End Time"; Time) { }
     }

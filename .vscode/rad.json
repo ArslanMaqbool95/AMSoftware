@@ -1,1 +1,1 @@
-﻿{"Added":[],"Modified":[],"Removed":[]}
+﻿{"Added":[{"Id":50137,"Kind":12,"Name":"PlayListHeaderPage","PackagePath":"/src/Pages/PlayListHeaderPage.al"},{"Id":50138,"Kind":12,"Name":"Playlist Document","PackagePath":"/src/Pages/PlaylistDocument.al"}],"Modified":[{"Id":50105,"Kind":10,"Name":"Radio Show Table","PackagePath":"/src/Tables/RadioShowTable.al"},{"Id":50110,"Kind":10,"Name":"Playlist Header","PackagePath":"/src/Tables/PlaylistHeader.al"},{"Id":50111,"Kind":10,"Name":"Playlist Line","PackagePath":"/src/Tables/PlayListLine.al"}],"Removed":[]}

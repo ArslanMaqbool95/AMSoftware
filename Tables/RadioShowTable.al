@@ -30,6 +30,22 @@ table 50105 "Radio Show Table"
         {
             FieldClass = FlowFilter;
         }
+        field(21; "PSAs Required"; Boolean) { }
+        field(22; "PSA Count"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count("Playlist Line" where
+            ("No." = field("No."), Type = const(Item), "Data Format" = const(PSA)));
+            Editable = false;
+        }
+        field(23; "Ads Required"; Boolean) { }
+        field(24; "Ads Count"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count("Playlist Line" where
+            ("No." = field("No."), Type = const(Item), "Data Format" = const(Advertisement)));
+            Editable = false;
+        }
     }
 
     keys
