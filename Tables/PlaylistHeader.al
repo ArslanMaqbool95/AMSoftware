@@ -70,28 +70,54 @@ table 50110 "Playlist Header"
             Clustered = true;
         }
     }
-
+    procedure NWSRequired(Category: Option ,News,Weather,Sports): Integer
     var
-        myInt: Integer;
-
-    trigger OnInsert()
+        PlaylistLine: Record "Playlist Line";
+        RadioShow: Record "Radio Show Table";
+        RadioShowType: Record "Radio Show Type";
+        Cnt: Integer;
     begin
-
+        PlaylistLine.SetRange("Documents No.", "No.");
+        PlaylistLine.SetRange(Type, PlaylistLine.Type::Show);
+        if PlaylistLine.FindSet then
+            repeat
+                RadioShow.get(PlaylistLine."No.");
+                RadioShowType.Get(RadioShow."Radio Show Type");
+                case Category of
+                    Category::News:
+                        if RadioShowType.Code = 'News' then
+                            Cnt += 1;
+                    Category::Weather:
+                        if RadioShowType.Code = 'Weather' then
+                            Cnt += 1;
+                    Category::Sports:
+                        if RadioShowType.Code = 'Sports' then
+                            Cnt += 1;
+                end;
+            until playlistLine.next = 0;
     end;
 
-    trigger OnModify()
-    begin
+    // var
+    //     myInt: Integer;
 
-    end;
+    // trigger OnInsert()
+    // begin
 
-    trigger OnDelete()
-    begin
+    // end;
 
-    end;
+    // trigger OnModify()
+    // begin
 
-    trigger OnRename()
-    begin
+    // end;
 
-    end;
+    // trigger OnDelete()
+    // begin
+
+    // end;
+
+    // trigger OnRename()
+    // begin
+
+    // end;
 
 }

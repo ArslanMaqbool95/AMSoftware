@@ -46,6 +46,7 @@ table 50105 "Radio Show Table"
             ("No." = field("No."), Type = const(Item), "Data Format" = const(Advertisement)));
             Editable = false;
         }
+        field(25; "Document No."; Code[50]) { }
     }
 
     keys
