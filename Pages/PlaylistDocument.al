@@ -9,10 +9,11 @@ page 50138 "Playlist Document"
     {
         area(Content)
         {
-            group(GroupName)
+            group(Group)
             {
                 field("No."; Rec."No.") { ApplicationArea = All; }
                 field(Description; Rec.Description) { ApplicationArea = All; }
+                field("Document No."; Rec."Document No.") { }
                 field("Radio Show No."; Rec."Radio Show No.")
                 {
                     ApplicationArea = All;
@@ -29,6 +30,11 @@ page 50138 "Playlist Document"
 
                 field(Duration; Rec.Duration) { ApplicationArea = all; }
 
+            }
+            part(line; "Playlist Subpage")
+            {
+                SubPageLink = "Documents No." = field("No.");
+                SubPageView = sorting("Documents No.", "Line No.");
             }
         }
     }

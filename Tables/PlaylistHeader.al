@@ -41,6 +41,7 @@ table 50110 "Playlist Header"
             end;
         }
         field(7; "End Time"; Time) { }
+        field(8; "Document No."; Code[50]) { }
         field(21; "PSAs Required"; Boolean) { }
         field(22; "PSA Count"; Integer)
         {
