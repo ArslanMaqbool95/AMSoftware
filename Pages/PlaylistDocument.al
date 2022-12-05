@@ -37,6 +37,13 @@ page 50138 "Playlist Document"
                 SubPageView = sorting("Documents No.", "Line No.");
             }
         }
+        area(FactBoxes)
+        {
+            part(factbox; "Playlist Factbox")
+            {
+                SubPageLink = "No." = field("No.");
+            }
+        }
     }
 
     actions
