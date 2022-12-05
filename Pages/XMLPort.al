@@ -2,7 +2,7 @@ xmlport 50142 "Ratings Import"
 {
     UseDefaultNamespace = true;
     FormatEvaluate = Xml;
-    DefaultNamespace = 'urn:Microsoft dynamics nav/xmlports/RatingImport';
+    //DefaultNamespace = 'urn:Microsoft dynamics nav/xmlports/RatingImport';
     Direction = Both;
 
     schema
